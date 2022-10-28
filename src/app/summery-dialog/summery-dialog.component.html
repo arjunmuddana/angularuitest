@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>Summery</h2>
+<mat-dialog-content class="mat-typography" >
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="Id">
+      <mat-header-cell *matHeaderCellDef> Id </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Customer">
+      <mat-header-cell *matHeaderCellDef> Customer </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.customer}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Month1">
+      <mat-header-cell *matHeaderCellDef> Month1 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.month1}} </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Month2">
+      <mat-header-cell *matHeaderCellDef> Month2 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.month2}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Month3">
+      <mat-header-cell *matHeaderCellDef> Month3 </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.month3}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Totalpoints">
+      <mat-header-cell *matHeaderCellDef> Total Reward Points </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.totalpoints}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

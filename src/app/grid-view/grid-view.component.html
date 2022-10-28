@@ -1,0 +1,70 @@
+ <div class="row" style="margin: 20px;">
+     <div class="col-md-8">
+       <form [formGroup]="purchaseForm" (ngSubmit)="addData()">
+         <mat-form-field appearance="outline">
+           <mat-label>Customer</mat-label>
+           <mat-select formControlName="name">
+             <mat-option *ngFor="let Customer of Customers" [value]="Customer.value">
+               {{Customer.value}}
+             </mat-option>
+           </mat-select>
+         </mat-form-field>
+
+         <mat-form-field appearance="outline">
+           <mat-label>Month</mat-label>
+           <mat-select formControlName="month">
+             <mat-option *ngFor="let Month of Months" [value]="Month.value">
+               {{Month.value}}
+             </mat-option>
+           </mat-select>
+         </mat-form-field>
+
+         <mat-form-field appearance="outline">
+           <mat-label>Price</mat-label>
+           <input matInput placeholder="Ex: 120" type="number" formControlName="price">
+         </mat-form-field>
+
+         <button mat-raised-button  type="submit" class="demo-button" [disabled]="purchaseForm.invalid">
+          Add Record
+        </button>
+       </form>
+     </div>
+
+   <div style="margin: 20px; margin-top: 0px;">
+     <div>
+       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+         <!-- <ng-container matColumnDef="Id">
+           <th mat-header-cell *matHeaderCellDef>Id</th>
+           <td mat-cell *matCellDef="let element">{{element.id}}</td>
+         </ng-container> -->
+
+         <ng-container matColumnDef="Customer">
+           <th mat-header-cell *matHeaderCellDef>Customer</th>
+           <td mat-cell *matCellDef="let element">{{element.name}}</td>
+         </ng-container>
+
+         <ng-container matColumnDef="Month">
+           <th mat-header-cell *matHeaderCellDef>Month</th>
+           <td mat-cell *matCellDef="let element">{{element.month}}</td>
+         </ng-container>
+
+         <ng-container matColumnDef="Price">
+           <th mat-header-cell *matHeaderCellDef>Price</th>
+           <td mat-cell *matCellDef="let element">{{element.price}}</td>
+         </ng-container>
+
+         <ng-container matColumnDef="RewardPoints">
+           <th mat-header-cell *matHeaderCellDef>RewardPoints</th>
+           <td mat-cell *matCellDef="let element">{{element.rewardPoints}}</td>
+         </ng-container>
+
+         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+       </table>
+     </div>
+
+   </div>
+
+ </div>
+

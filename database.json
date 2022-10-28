@@ -1,0 +1,81 @@
+{
+  "purchaseList": [
+    {
+      "name": "Customer1",
+      "month": 1,
+      "price": 120,
+      "rewardPoints": 90,
+      "id": 1
+    },
+    {
+      "name": "Customer1",
+      "month": 3,
+      "price": 130,
+      "rewardPoints": 110,
+      "id": 2
+    },
+    {
+      "name": "Customer2",
+      "month": 2,
+      "price": 115,
+      "rewardPoints": 80,
+      "id": 3
+    },
+    {
+      "name": "Customer3",
+      "month": 3,
+      "price": 100,
+      "rewardPoints": 50,
+      "id": 4
+    },
+    {
+      "name": "Customer5",
+      "month": 3,
+      "price": 80,
+      "rewardPoints": 30,
+      "id": 5
+    }
+  ],
+  "summery": [
+    {
+      "customer": "Customer1",
+      "month1": 90,
+      "month2": 0,
+      "month3": 110,
+      "totalpoints": 200,
+      "id": 0
+    },
+    {
+      "customer": "Customer2",
+      "month1": 0,
+      "month2": 80,
+      "month3": 0,
+      "totalpoints": 80,
+      "id": 1
+    },
+    {
+      "customer": "Customer3",
+      "month1": 0,
+      "month2": 0,
+      "month3": 50,
+      "totalpoints": 50,
+      "id": 2
+    },
+    {
+      "customer": "Customer5",
+      "month1": 0,
+      "month2": 0,
+      "month3": 30,
+      "totalpoints": 30,
+      "id": 4
+    },
+    {
+      "customer": "Customer5",
+      "month1": 0,
+      "month2": 0,
+      "month3": 0,
+      "totalpoints": 0,
+      "id": 4
+    }
+  ]
+}
